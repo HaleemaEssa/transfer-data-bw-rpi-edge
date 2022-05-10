@@ -28,18 +28,12 @@ pipeline {
                         currentBuild.result = "SUCCESS" 
                         //sh 'nano data.csv'             
                     }
-              //if (currentBuild.result == 'SUCCESS') {
-               // sh 'sleep 2'
-                //sh 'nano data.csv'
-                //sh 'exit 0' 
-              
-              //}
-              
-            }
+                                                     
+            
 
-          }
-        }
-      }
+          }//script
+        }//step
+      }//stage
 		
           stage('On-RPI') {
 		   options {
@@ -61,13 +55,13 @@ pipeline {
                     }
           }
 	  }
-	  }
-        }//parallel
+	  
+        }//stage
 		  
 		  
 		  
          
-}
-}
-}
+}//parallel
+}//stage
+}//stages
 	}//pipe
