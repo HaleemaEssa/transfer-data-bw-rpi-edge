@@ -39,6 +39,7 @@ pipeline {
 
           }
         }
+      }
 		
           stage('On-RPI') {
 		   options {
@@ -59,6 +60,8 @@ pipeline {
                         currentBuild.result = "SUCCESS" //currentBuild.result = 'SUCCESS'
                     }
           }
+	  }
+	  }
         }//parallel
 		  
 		  
