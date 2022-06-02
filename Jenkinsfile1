@@ -32,7 +32,7 @@ pipeline {
 	      
         stage('On-Edge1') {
 		options {
-                timeout(time: 60, unit: "SECONDS")
+                timeout(time: 350, unit: "SECONDS")
             }
    
           agent {label 'local'}
