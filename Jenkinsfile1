@@ -16,9 +16,9 @@ pipeline {
             try {
             sh 'echo "rpi" '
             git branch: 'main', url: 'https://github.com/HaleemaEssa/pri-blynk.git'
-            //sh 'docker build -t haleema/docker-rpi:latest .'
+            sh 'docker build -t haleema/docker-rpi-blynk:latest .'
             sleep(time: 3, unit: "SECONDS")
-            sh 'docker run --privileged -t haleema/docker-rpi'
+            sh 'docker run --privileged -t haleema/docker-rpi-blynk'
             sleep(time: 4, unit: "SECONDS")
                } catch (Throwable e) {
                         echo "Caught ${e.toString()}"
